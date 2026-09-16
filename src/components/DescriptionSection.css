@@ -1,0 +1,87 @@
+.description-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Translation Banner */
+.translation-banner {
+  display: block;
+  background: #f7f7f7;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.translation-text {
+  font-size: 15px;
+  color: #222222;
+  line-height: 1.4;
+}
+
+.translation-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222222;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Description text — collapsed state */
+.description-collapsed {
+  margin-bottom: 16px;
+}
+
+.description-visible {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #222222;
+  margin: 0 0 4px 0;
+}
+
+.description-faded {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #8a8a8a;
+  margin: 0;
+}
+
+/* Description text — expanded state */
+.description-full {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #222222;
+  margin: 0 0 16px 0;
+  white-space: pre-wrap;
+}
+
+/* Show more / Show less button */
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.show-more-text {
+  text-decoration: underline;
+}
+
+.show-more-chevron {
+  margin-top: 1px;
+  color: #222222;
+  flex-shrink: 0;
+}
+
+.show-more-btn:hover .show-more-text {
+  color: #000000;
+}

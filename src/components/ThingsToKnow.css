@@ -1,0 +1,78 @@
+/* THINGS TO KNOW FULL SECTION */
+.things-know-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  color: #222222;
+  font-family: inherit;
+}
+
+.things-know-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0 0 24px 0;
+  line-height: 26px;
+}
+
+.things-know-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 64px;
+  row-gap: 32px;
+}
+
+@media (max-width: 744px) {
+  .things-know-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.things-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.things-icon-wrap {
+  color: #222222;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.things-col-heading {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0 0 12px 0;
+  line-height: 20px;
+}
+
+.things-col-text {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #222222;
+  margin: 0 0 6px 0;
+}
+
+.things-learn-more {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0 0 0;
+  text-align: left;
+  align-self: flex-start;
+  font-family: inherit;
+}
+
+.things-learn-more:hover {
+  color: #000000;
+}
+

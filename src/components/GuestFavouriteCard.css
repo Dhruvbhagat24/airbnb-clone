@@ -1,0 +1,153 @@
+.guest-favourite-card {
+  border: 1px solid #dddddd;
+  border-radius: 24px;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: #ffffff;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* 1. Left Badge Box: Wreath + "Guest favourite" */
+.gf-badge-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.gf-wreath-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.gf-badge-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #222222;
+  letter-spacing: -0.2px;
+}
+
+/* 2. Middle: Description */
+.gf-desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #222222;
+  flex: 1;
+  min-width: 0;
+}
+
+.gf-desc-line {
+  white-space: nowrap;
+}
+
+/* 3. Right Stats: Rating & Review count */
+.gf-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.gf-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 48px;
+}
+
+.gf-rating-val {
+  font-size: 21px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+}
+
+.gf-rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222222;
+  text-shadow: 0 0 0.25px #222222;
+  margin-top: 4px;
+  line-height: 1;
+}
+
+.gf-stats-divider {
+  width: 1px;
+  height: 38px;
+  background: #dddddd;
+}
+
+.gf-review-count {
+  font-size: 21px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+}
+
+.gf-review-text {
+  font-size: 11px;
+  font-weight: 400;
+  color: #222222;
+  margin-top: 4px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .guest-favourite-card {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .gf-badge-box {
+    gap: 8px;
+  }
+
+  .gf-wreath-img {
+    height: 28px;
+  }
+
+  .gf-badge-title {
+    font-size: 14px;
+  }
+
+  .gf-desc {
+    font-size: 13px;
+  }
+
+  .gf-stats {
+    gap: 10px;
+  }
+
+  .gf-rating-val,
+  .gf-review-count {
+    font-size: 16px;
+  }
+
+  .gf-rating-stars {
+    font-size: 7px;
+  }
+}
+
+
+

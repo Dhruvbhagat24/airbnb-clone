@@ -1,0 +1,289 @@
+/* FULLSCREEN WHITE PHOTO TOUR OVERLAY */
+.pt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  overflow-y: auto;
+  color: #717171;
+  font-weight: 100;
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* MINIMAL STICKY HEADER */
+.pt-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #ffffff;
+}
+
+.pt-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px;
+  padding: 0 24px;
+  left: 0;
+}
+
+.pt-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: #222222;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.pt-back-btn:hover {
+  background-color: #f7f7f7;
+}
+
+.pt-back-btn:focus-visible {
+  outline: 2px solid #222222;
+  outline-offset: 2px;
+}
+
+.pt-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0;
+}
+
+.pt-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pt-action-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: #222222;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.pt-action-icon-btn:hover {
+  background-color: #f7f7f7;
+}
+
+.pt-action-icon-btn:focus-visible {
+  outline: 2px solid #222222;
+  outline-offset: 2px;
+}
+
+/* 9-CATEGORY NAVBAR MATCHING REFERENCE */
+.pt-nav-container {
+  width: min(980px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 8px 0 16px;
+  background-color: #ffffff;
+}
+
+.pt-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  column-gap: 19px;
+  row-gap: 16px;
+}
+
+.pt-nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+  transition: opacity 0.15s ease;
+}
+
+.pt-nav-card:hover {
+  opacity: 0.85;
+}
+
+.pt-nav-card:focus-visible {
+  outline: 2px solid #222222;
+  outline-offset: 2px;
+}
+
+.pt-nav-thumb-img {
+  width: 100%;
+  aspect-ratio: 105 / 100;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), filter 0.25s;
+}
+
+.pt-nav-thumb-placeholder {
+  width: 100%;
+  aspect-ratio: 105 / 100;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.pt-nav-card-label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #717171;
+  font-weight: 400;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+/* =============================================
+   ASYMMETRIC 2-COLUMN MAIN CONTENT
+   Reference geometry:
+     Container width: 1053px centered
+     Left text column: 1fr (493px)
+     Column gap: 67px
+     Right gallery: 493px
+     Total span: 493 + 67 + 493 = 1053px
+   ============================================= */
+.pt-main {
+  width: min(980px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 40px 0 120px;
+  box-sizing: border-box;
+}
+
+/*
+  Each .pt-section is a CSS grid that acts as the
+  containing block for the sticky .pt-section-left.
+  The sticky element is bounded by the section's height,
+  so when the section scrolls past, its text scrolls away.
+*/
+.pt-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  column-gap: 67px;
+  align-items: start;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+}
+
+/*
+  Per-section sticky: The left column sticks at the
+  header offset while scrolling through THIS section only.
+*/
+.pt-section-left {
+  position: sticky;
+  top: 96px;
+  align-self: start;
+}
+
+.pt-section-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0 0 0px 0;
+}
+
+.pt-section-details {
+  font-size: 16px;
+  color: #717171;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  max-width: 440px;
+}
+
+.pt-section-gallery {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 0 0 auto;
+  justify-self: end;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.pt-photo-card {
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  display: block;
+  transition: opacity 0.15s ease;
+}
+
+.pt-photo-card:hover {
+  opacity: 0.94;
+}
+
+.pt-photo-card:focus-visible {
+  outline: 3px solid #222222;
+  outline-offset: 3px;
+}
+
+.pt-photo-card--large {
+  aspect-ratio: 3 / 2;
+  height: auto;
+}
+
+.pt-photo-card--small {
+  aspect-ratio: 3 / 2;
+  height: auto;
+}
+
+.pt-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pt-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* PLACEHOLDER STYLING MATCHING REFERENCE */
+.pt-photo-placeholder {
+  background-color: #ebebeb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pt-photo-placeholder--large {
+  aspect-ratio: 3 / 2;
+  height: auto;
+}
+
+.pt-photo-placeholder--small {
+  aspect-ratio: 3 / 2;
+  height: auto;
+}

@@ -1,0 +1,35 @@
+.host-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.host-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.host-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.host-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0 0 2px 0;
+  line-height: 20px;
+}
+
+.host-meta {
+  font-size: 14px;
+  color: #717171;
+  margin: 0;
+  line-height: 18px;
+}
+

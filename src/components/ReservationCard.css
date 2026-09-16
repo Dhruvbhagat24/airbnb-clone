@@ -1,0 +1,225 @@
+.reservation-card-container {
+  position: static;
+}
+
+.reservation-card {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  padding: 24px;
+  background: var(--color-white);
+}
+
+/* Price Row */
+.rc-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.rc-price {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+}
+
+.rc-price-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+/* Date / Guest Selector */
+.rc-selector-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.rc-selector {
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rc-date-cell--focused {
+  outline: 2px solid #222222;
+  outline-offset: -1px;
+  background-color: #ffffff !important;
+  z-index: 2;
+  position: relative;
+}
+
+.rc-date-cell:first-child.rc-date-cell--focused {
+  border-top-left-radius: 8px;
+}
+
+.rc-date-cell--right.rc-date-cell--focused {
+  border-top-right-radius: 8px;
+}
+
+.rc-date-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rc-date-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #b0b0b0;
+  transition: background-color 0.15s ease;
+}
+
+.rc-date-cell:hover {
+  background: var(--color-bg-light);
+}
+
+.rc-date-cell--right {
+  border-left: 1px solid #b0b0b0;
+}
+
+.rc-cell-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-primary);
+}
+
+.rc-cell-value {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  font-weight: 400;
+}
+
+.rc-guest-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  width: 100%;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: background-color 0.15s ease;
+}
+
+.rc-guest-row:hover {
+  background: var(--color-bg-light);
+}
+
+.rc-guest-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.rc-chevron {
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+/* Cancellation Notice */
+.rc-cancellation {
+  text-align: center;
+  font-size: 14px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  line-height: 1.25;
+}
+
+.rc-cancellation-muted {
+  color: #717171;
+  font-weight: 400;
+}
+
+.rc-cancellation-bold {
+  color: #222222;
+  font-weight: 500;
+}
+
+/* Reserve Button */
+.rc-reserve-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.rc-reserve-btn:hover {
+  opacity: 0.92;
+}
+
+.rc-reserve-btn:active {
+  transform: scale(0.98);
+}
+
+.rc-reserve-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Footer */
+.rc-charge-notice {
+  text-align: center;
+  font-size: 14px;
+  color: #717171;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+/* Report Button */
+.rc-report-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #717171;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.rc-report-icon {
+  flex-shrink: 0;
+  color: #717171;
+  transition: color 0.15s ease;
+}
+
+.rc-report-text {
+  text-decoration: underline;
+}
+
+.rc-report-btn:hover,
+.rc-report-btn:hover .rc-report-icon {
+  color: #222222;
+}
+
+.rc-report-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+

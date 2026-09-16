@@ -1,0 +1,276 @@
+/* MEET YOUR HOST FULL SECTION */
+.meet-host-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  border-top: 1px solid #dddddd;
+  color: #222222;
+  font-family: inherit;
+}
+
+.meet-host-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0 0 24px 0;
+}
+
+.meet-host-layout {
+  display: grid;
+  grid-template-columns: 395px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 950px) {
+  .meet-host-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* HOST PROFILE CARD */
+.host-profile-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.host-card-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.host-avatar-wrapper {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 12px;
+}
+
+.host-emblem-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1d3c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  user-select: none;
+}
+
+.host-emblem-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.host-emblem-sub {
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.host-verified-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e31c5f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.host-card-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0;
+  line-height: 1.15;
+  word-break: break-word;
+}
+
+.host-card-badge {
+  font-size: 14px;
+  color: #717171;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* CARD STATS */
+.host-card-stats {
+  display: flex;
+  flex-direction: column;
+  min-width: 95px;
+  padding-left: 16px;
+  border-left: 1px solid #ededed;
+}
+
+.host-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.host-stat-num {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.2;
+}
+
+.host-stat-star {
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.host-stat-lbl {
+  font-size: 10px;
+  font-weight: 500;
+  color: #717171;
+  margin-top: 2px;
+}
+
+.host-stat-divider {
+  height: 1px;
+  background-color: #ededed;
+  margin: 10px 0;
+}
+
+/* PERSONAL FACTS */
+.host-personal-facts {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.host-fact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: #222222;
+}
+
+.host-fact-item svg {
+  color: #222222;
+  flex-shrink: 0;
+}
+
+/* RIGHT COLUMN */
+.cohosts-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 20px 0;
+}
+
+.cohosts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.cohost-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cohost-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cohost-name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.host-details-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 12px 0;
+}
+
+.host-detail-line {
+  font-size: 16px;
+  color: #222222;
+  margin: 0 0 6px 0;
+}
+
+.message-host-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 12px;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  transition: background-color 0.15s ease;
+}
+
+.message-host-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.host-safety-divider {
+  height: 1px;
+  background-color: #dddddd;
+  margin-bottom: 24px;
+}
+
+.host-safety-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.host-safety-shield-svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: #e31c5f;
+  stroke: #e31c5f;
+}
+
+.host-safety-text {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a6a6a;
+  margin: 0;
+}

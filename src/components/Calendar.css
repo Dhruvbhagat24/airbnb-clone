@@ -1,0 +1,305 @@
+/* ==============================
+   Calendar Container
+   ============================== */
+
+.calendar {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  user-select: none;
+}
+
+.calendar--inline {
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.calendar--popup {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 100;
+  width: 660px;
+  padding: 24px 32px 16px 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--color-white);
+  animation: calFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes calFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Summary Header
+   ============================== */
+
+.cal-header {
+  margin-bottom: 20px;
+}
+
+.cal-summary-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 4px 0;
+}
+
+.cal-summary-range {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==============================
+   Navigation Row
+   ============================== */
+
+.cal-nav-row {
+  position: relative;
+  width: 100%;
+}
+
+.cal-nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.cal-nav-btn:hover {
+  background: var(--color-bg-light);
+}
+
+.cal-nav-btn:active {
+  transform: scale(0.92);
+}
+
+.cal-nav-btn--prev {
+  left: 0;
+}
+
+.cal-nav-btn--next {
+  right: 0;
+}
+
+.cal-nav-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==============================
+   Months Container
+   ============================== */
+
+.cal-months {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+.cal-month {
+  min-width: 0;
+}
+
+.cal-month-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 4px 0 18px 0;
+  line-height: 24px;
+}
+
+/* ==============================
+   Weekday Labels
+   ============================== */
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 4px;
+}
+
+.cal-weekday {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 4px 0;
+}
+
+/* ==============================
+   Date Grid
+   ============================== */
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 2px;
+}
+
+.cal-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  padding: 0;
+  transition: background-color 0.1s ease;
+}
+
+.cal-cell--empty {
+  cursor: default;
+}
+
+.cal-day-num {
+  position: relative;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Hover */
+.cal-cell:not(.cal-cell--empty):not(.cal-cell--past):not(.cal-cell--start):not(.cal-cell--end):hover .cal-day-num {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-text-primary);
+}
+
+/* Selected Start */
+.cal-cell--start {
+  background: linear-gradient(to right, transparent 50%, #f7f7f7 50%);
+}
+
+.cal-cell--start .cal-day-num {
+  background: #222222;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Selected End */
+.cal-cell--end {
+  background: linear-gradient(to left, transparent 50%, #f7f7f7 50%);
+}
+
+.cal-cell--end .cal-day-num {
+  background: #222222;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Single selected date */
+.cal-cell--selected-single {
+  background: transparent;
+}
+
+.cal-cell--selected-single .cal-day-num {
+  background: #222222;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* In Range */
+.cal-cell--range {
+  background: #f7f7f7;
+}
+
+.cal-cell--range .cal-day-num {
+  color: #222222;
+  font-weight: 500;
+}
+
+/* Past dates */
+.cal-cell--past {
+  cursor: default;
+}
+
+.cal-cell--past .cal-day-num {
+  color: var(--color-border);
+}
+
+/* Focus visible */
+.cal-cell:focus-visible .cal-day-num {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+
+.cal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 8px;
+}
+
+.cal-keyboard-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.cal-keyboard-btn:hover {
+  background-color: var(--color-bg-light);
+}
+
+.cal-clear-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.cal-clear-btn:hover {
+  color: #000000;
+}
+
+.cal-clear-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

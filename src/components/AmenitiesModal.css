@@ -1,0 +1,217 @@
+/* Amenities Modal Overlay */
+.amenities-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  animation: amenitiesFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes amenitiesFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Dialog Box */
+.amenities-modal-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  animation: amenitiesSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes amenitiesSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Header with Close Button */
+.amenities-modal-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 20px 30px 12px 30px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.amenities-modal-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  margin-left: -4px;
+}
+
+.amenities-modal-close-btn:hover {
+  background-color: #f7f7f7;
+}
+
+.amenities-modal-close-btn:active {
+  transform: scale(0.94);
+}
+
+/* Scrollable Body Content */
+.amenities-modal-content {
+  padding: 0 46px 36px 46px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Custom Scrollbar matching Airbnb */
+.amenities-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.amenities-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.amenities-modal-content::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 4px;
+}
+
+.amenities-modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: #717171;
+}
+
+/* Modal Title */
+.amenities-modal-title {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #222222;
+  margin: 12px 0 28px 0;
+}
+
+/* Category Group */
+.amenities-modal-group {
+  margin-bottom: 24px;
+}
+
+.amenities-modal-group:last-child {
+  margin-bottom: 0;
+}
+
+.amenities-modal-group-title {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #222222;
+  margin: 28px 0 4px 0;
+}
+
+.amenities-modal-group:first-of-type .amenities-modal-group-title {
+  margin-top: 0;
+}
+
+/* Amenity List Rows */
+.amenities-modal-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.amenities-modal-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.amenities-modal-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #222222;
+}
+
+.amenities-modal-item--unavailable .amenities-modal-icon {
+  color: #717171;
+}
+
+.amenities-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.amenities-modal-name {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #222222;
+}
+
+.amenities-modal-name--strikethrough {
+  text-decoration: line-through;
+  color: #717171;
+}
+
+.amenities-modal-desc {
+  font-family: inherit;
+  font-size: 14px;
+  color: #717171;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 744px) {
+  .amenities-modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .amenities-modal-container {
+    max-height: 90vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .amenities-modal-header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .amenities-modal-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
