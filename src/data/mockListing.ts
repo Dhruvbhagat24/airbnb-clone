@@ -150,7 +150,7 @@ export const mockListing: ListingData = {
     },
     {
       id: 'p3_2',
-      url: 'https://images.unsplash.com/photo-1616594039964-ae9021a500a0?auto=format&fit=crop&w=800&q=80',
+      url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
       caption: 'Bedroom nightstand & bedside reading lamps',
       category: 'Bedroom',
       categoryDetails: 'Double bed · Air conditioning · Bed linen · Ceiling fan · Clothes storage · Cot · Hangers · Iron · Room-darkening blinds · Cleaning available during stay · Cleaning products · Long-term stays allowed · Private entrance · Wifi',
@@ -185,7 +185,7 @@ export const mockListing: ListingData = {
     // 7. Exterior
     {
       id: 'p5',
-      url: 'https://images.unsplash.com/photo-1564013799919-ab500027ffc6?auto=format&fit=crop&w=800&q=80',
+      url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
       caption: 'Exterior building view in Candolim, Goa',
       category: 'Exterior',
       categoryDetails: 'Building facade · Gated entrance · Landscaped garden',
@@ -227,7 +227,7 @@ export const mockListing: ListingData = {
     },
     {
       id: 'padd2',
-      url: 'https://images.unsplash.com/photo-1500585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+      url: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=800&q=80',
       caption: 'Apartment entry corridor & interior design detail',
       category: 'Additional photos',
       categoryDetails: 'Balcony · Greenery view · High-speed WiFi · Parking spot',

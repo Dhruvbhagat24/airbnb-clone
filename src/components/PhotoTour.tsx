@@ -243,17 +243,6 @@ export default function PhotoTour({
                   </div>
                 )}
 
-                {/* PLACEHOLDER BLOCKS MATCHING REFERENCE LOADING APPEARANCE */}
-                {group.photos.length <= 1 && (
-                  <div className="pt-secondary-grid">
-                    <div className="pt-photo-placeholder pt-photo-placeholder--small">
-                      <span>{group.category}</span>
-                    </div>
-                    <div className="pt-photo-placeholder pt-photo-placeholder--small">
-                      <span>{group.category}</span>
-                    </div>
-                  </div>
-                )}
               </div>
             </section>
           );
